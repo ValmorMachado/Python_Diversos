@@ -1,6 +1,6 @@
 # Desenvolvido por Valmor Machado. INFNET 2021
 # Máteria de Lógica de programação. Professor: Carlos Pivotto.
-
+# Última alteração: 12/04/2021.
 # Programa para verificar um CPF
 
 print("---------------------------------------------------------------------------------")
