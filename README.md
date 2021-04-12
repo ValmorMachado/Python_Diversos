@@ -1,2 +1,2 @@
-# INFNET-LP-Python
+# Python_Diversos
 Repositório de exercícios resolvidos em phyton
