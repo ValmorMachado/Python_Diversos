@@ -6,16 +6,24 @@
 print("---------------------------------------------------------------------------------")
 print("------------------------------ VERIFICADOR DE CPF -------------------------------")
 print("---------------------------------------------------------------------------------")
+print("")
 # A pessoa digita o nome.
 nome = input(f"Informe seu nome: ")
 
-# Digita o CPF.
+# Pede o valor do CPF e válida.
 cpf = input(f"\nInforme seu CPF com 11 algarismos: ")
 
-# Se o número de caractes for diferente de 11 pede para digitar novamente
-while len(cpf) != 11:
-    print("\nDigite um cpf válido")
-    cpf = input(f"\nInforme seu CPF: ")
+try:
+    valor = int(cpf)
+except ValueError:
+    valor = 0
+    
+while len(cpf) < 11 or valor == 0:
+    cpf = input(f"\nAtenção, Informe seu CPF com 11 algarismos: ")
+    try:
+        valor = int(cpf)
+    except ValueError:
+        valor = 0
 
 # Separando os algarismos em uma lista.
 digitos = list(cpf)
@@ -47,9 +55,13 @@ else:
 
 # Condição para saber se o cpf é verdadeiro
 if d10 != int(digitos[9]) or d11 != int(digitos[10]):
-    print(f"{nome}, seu cpf está inválido!")
+    print("")
+    print(f"\n{nome}, seu cpf é inválido!")
+    print("")
 else:
-    print(f"{nome}, seu cpf está válido!")
+    print("")
+    print(f"{nome}, seu cpf é válido!")
+    print("")
 
 print("---------------------------------------------------------------------------------")
 print("---------------------------------- FIM ------------------------------------------")
