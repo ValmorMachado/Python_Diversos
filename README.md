@@ -1,3 +1,2 @@
 # INFNET-LP-Python
-Repositório de exercícios resolvidos
-Alguns exercicios resolvidos em phyton
+Repositório de exercícios resolvidos em phyton
